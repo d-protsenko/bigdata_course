@@ -1,5 +1,5 @@
 # setwd('./second_lab')
-M <- read.table("./turkiye.csv") #There should be name of the file and reading parameters, depending on the structure of the file
+M <- read.csv("./turkiye.csv") #There should be name of the file and reading parameters, depending on the structure of the file
 
 ptm <- proc.time()
 
