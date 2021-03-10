@@ -34,7 +34,7 @@ def task_d(x, y):
 
 
 def task_e(x, y):
-    print('Corr: {0:.{1}f}'.format(x.corr(y),4))
+    print('Corr: {0:.{1}f}'.format(x.corr(y), 4))
 
 
 if __name__ == '__main__':
