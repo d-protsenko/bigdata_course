@@ -13,9 +13,10 @@ if not sys.warnoptions:
 
 
 def main():
-    task_1()
+    # task_1()
     task_3()
-    task_5()
+    # task_4()
+    # task_5()
 
 
 def task_1():
@@ -36,6 +37,21 @@ def task_1():
 
 
 def task_3():
+    df = pd.DataFrame({
+        'A': generate(),
+        'B': generate(),
+        'C': generate()
+    })
+    nan_percent = {'A': 0.15, 'B': 0.15, 'C': 0.15}
+    for col in df:
+        for i, row_value in df[col].iteritems():
+            if random.random() <= nan_percent[col]:
+                df[col][i] = np.nan
+    print(df.head(10))
+    print(df.fillna(df.mean()).head(10))
+
+
+def task_4():
     data = pd.DataFrame({
         'A': generate(),
         'B': generate(),
@@ -44,8 +60,8 @@ def task_3():
     # find absolute value of z-score for each observation
     z = np.abs(stats.zscore(data))
 
-    # only keep rows in dataframe with all z-scores less than absolute value of 3
-    data_clean = data[(z < 3).all(axis=1)]
+    # only keep rows in dataframe with all z-scores less than absolute value of 2
+    data_clean = data[(z < 2).all(axis=1)]
     print(data.shape)
     # shape of data was changed
     print(data_clean.shape)
