@@ -24,7 +24,9 @@ str(read_file)
 
 # Generate 5% missing values at random
 bank.mis <- missForest::prodNA(read_file, noNA = 0.05)
-
+library(reshape2)
+library(ggplot2)
+library(dplyr)
 library('Boruta')
 library('Amelia')
 amelia_bank <- amelia(bank.mis, m=3, parallel = "multicore",noms=c('job','marital','education','default','housing','loan','contact','month','poutcome','y'))

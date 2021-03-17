@@ -13,10 +13,10 @@ if not sys.warnoptions:
 
 
 def main():
-    # task_1()
+    task_1()
     task_3()
-    # task_4()
-    # task_5()
+    task_4()
+    task_5()
 
 
 def task_1():
