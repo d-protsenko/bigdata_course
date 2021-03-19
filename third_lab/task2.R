@@ -1,13 +1,13 @@
 # setwd('./third_lab')
 
-dlina <- scan("./X_2.txt", sep=" ")
-diam <- scan("./Y_2.txt", sep=" ")
+x <- scan("./X_2.txt", sep=" ")
+y <- scan("./Y_2.txt", sep=" ")
 # Построим облако точек
-plot(dlina, diam, col="blue",type="p",pch=16,
-xlab="dlina",ylab="diam",main="Зависимость между X и Y")
+plot(x, y, col="blue",type="p",pch=16,
+xlab="x",ylab="y",main="Зависимость между X и Y")
 
 
-myregress <- lm(formula = diam ~ dlina)
+myregress <- lm(formula = diam ~ x)
 myregress
 
 # Построим график уравнения однофакторной линейной регрессии (с
