@@ -7,7 +7,7 @@ plot(x, y, col="blue",type="p",pch=16,
 xlab="x",ylab="y",main="Зависимость между X и Y")
 
 
-myregress <- lm(formula = diam ~ x)
+myregress <- lm(formula = y ~ x)
 myregress
 
 # Построим график уравнения однофакторной линейной регрессии (с

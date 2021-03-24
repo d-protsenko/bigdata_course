@@ -2,18 +2,12 @@ fish_set <- read.csv('./Fish.csv')
 
 height <- fish_set[, 6]
 width <- fish_set[, 7]
-
-
-# Построим облако точек
 plot(height, width, col="blue",type="p",pch=16,
 xlab="height",ylab="width",main="Зависимость между height и width")
-
 
 myregress <- lm(formula = width ~ height)
 myregress
 
-# Построим график уравнения однофакторной линейной регрессии (с
-# найденными коэффициентами)
 abline(myregress,col="red",lwd="3",add=TRUE)
 
 
